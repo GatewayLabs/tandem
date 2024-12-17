@@ -1,4 +1,5 @@
 use blake3::Hasher;
+use serde::{Deserialize, Serialize};
 
 use crate::Error;
 
@@ -164,7 +165,7 @@ impl Circuit {
 }
 
 /// A single gate in a larger [`Circuit`].
-#[derive(Clone, Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Gate {
     /// A single input bit coming from the circuit contributor.
     InContrib,

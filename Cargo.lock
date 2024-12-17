@@ -2291,6 +2291,7 @@ dependencies = [
  "rand",
  "rand_chacha",
  "serde",
+ "serde_json",
  "tandem_garble_interop",
 ]
 
