@@ -165,7 +165,8 @@ impl Circuit {
 }
 
 /// A single gate in a larger [`Circuit`].
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Gate {
     /// A single input bit coming from the circuit contributor.
     InContrib,
